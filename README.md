@@ -77,6 +77,25 @@ Copy `.env.example` to `.env` for local configuration. Never commit credentials.
 8. Pipeline observability
 9. Power BI/Tableau consumption layer
 
-## Status
+## BI deliverables
 
-Foundation implemented. Cloud resources, Snowflake objects, dbt models, measured execution results, and screenshots will be added as they are completed and validated.
+The repository includes implementation guides for both Power BI and Tableau under `bi/`, including the Gold-layer connection strategy, KPI definitions, DAX/calculated fields, dashboard layout, and evidence naming convention.
+
+Actual Power BI/Tableau screenshots are intentionally added only after the dashboards are rendered in those applications. This prevents mock images from being presented as execution evidence.
+
+## Implemented portfolio components
+
+- Reproducible synthetic transaction generator for CI/demo execution
+- Python profiling, ingestion metadata, S3 upload component, and data-quality utilities
+- Snowflake database/Medallion DDL and monitoring table
+- Silver cleansing and Gold sales/customer marts
+- Snowflake RBAC starter implementation
+- dbt Bronze sources, staging models, tests, fact model, and daily-sales mart
+- pytest automated validation
+- GitHub Actions pipeline that generates data, profiles it, and runs tests
+- Governance, lineage, security, deployment, architecture, dataset, Power BI, and Tableau documentation
+
+## Remaining environment-dependent evidence
+
+AWS S3/Snowpipe, Snowflake execution screenshots, dbt Cloud runs, Power BI Desktop screenshots, and Tableau screenshots require the corresponding connected cloud/application environments. Add only real execution evidence to `screenshots/`.
+
