@@ -16,5 +16,9 @@ jobs:
           cache: pip
       - name: Install dependencies
         run: pip install -r requirements.txt
+      - name: Generate reproducible sample data
+        run: python -m src.ingestion.generate_sample_data
+      - name: Profile generated data
+        run: python -c "from pathlib import Path; from src.validation.profile_data import profile_file; print(profile_file(Path('data/generated/orders.csv')))"
       - name: Run unit tests
         run: pytest -q
