@@ -1,0 +1,16 @@
+.venv/
+.env
+__pycache__/
+*.pyc
+.pytest_cache/
+.coverage
+htmlcov/
+logs/
+target/
+dbt_packages/
+.DS_Store
+.vscode/
+data/processed/*
+data/rejected/*
+!data/processed/.gitkeep
+!data/rejected/.gitkeep
