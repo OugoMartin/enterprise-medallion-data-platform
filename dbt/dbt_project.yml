@@ -1,0 +1,13 @@
+name: enterprise_medallion
+version: "1.0.0"
+config-version: 2
+profile: enterprise_medallion
+model-paths: ["models"]
+models:
+  enterprise_medallion:
+    staging:
+      +schema: silver
+      +materialized: view
+    marts:
+      +schema: gold
+      +materialized: view
