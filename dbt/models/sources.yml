@@ -1,0 +1,8 @@
+version: 2
+sources:
+  - name: bronze
+    database: ENTERPRISE_MEDALLION_DB
+    schema: BRONZE
+    tables:
+      - name: raw_customers
+      - name: raw_orders
